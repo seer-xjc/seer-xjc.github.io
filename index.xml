@@ -9,6 +9,13 @@
     <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://seer-xjc.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title></title>
+      <link>https://seer-xjc.github.io/docs/linux/%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://seer-xjc.github.io/docs/linux/%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;Linux 命令行系统是基于 Shell 的一种用户与操作系统内核交互的方式，是 Linux 系统操作的核心组成部分。通过键入命令，用户可以对系统进行几乎所有的操作，如文件管理、进程控制、系统配置、网络通信、软件安装等。linux具有非常完备的指令系统，各种指令、参数的灵活组合可以完成各种精妙的操作。&lt;/p&gt;&#xA;&lt;p&gt;Linux 指令系统虽然庞大而多样，但对于初学者而言，只需掌握一些常用的基础命令，便足以像使用 Windows 一样高效地操作 Linux 系统。下面文档中记录了linux系统中一些基础的常用命令。请自行下载学习。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://seer-xjc.github.io/files/Linux_1.pdf&#34;&gt;点击下载pdf文件&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>With ToC</title>
       <link>https://seer-xjc.github.io/docs/example/table-of-contents/with-toc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

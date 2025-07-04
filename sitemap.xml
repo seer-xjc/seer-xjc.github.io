@@ -2,9 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://seer-xjc.github.io/docs/linux/%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</loc>
+  </url><url>
     <loc>https://seer-xjc.github.io/docs/example/</loc>
   </url><url>
-    <loc>https://seer-xjc.github.io/docs/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://seer-xjc.github.io/docs/linux/</loc>
   </url><url>
     <loc>https://seer-xjc.github.io/docs/example/table-of-contents/with-toc/</loc>
   </url><url>
