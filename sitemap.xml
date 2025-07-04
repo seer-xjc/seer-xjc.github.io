@@ -4,8 +4,6 @@
   <url>
     <loc>https://seer-xjc.github.io/docs/linux/%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</loc>
   </url><url>
-    <loc>https://seer-xjc.github.io/docs/example/</loc>
-  </url><url>
     <loc>https://seer-xjc.github.io/docs/linux/</loc>
   </url><url>
     <loc>https://seer-xjc.github.io/docs/example/table-of-contents/with-toc/</loc>
@@ -21,6 +19,8 @@
     <loc>https://seer-xjc.github.io/docs/example/table-of-contents/</loc>
   </url><url>
     <loc>https://seer-xjc.github.io/docs/example/collapsed/</loc>
+  </url><url>
+    <loc>https://seer-xjc.github.io/docs/example/</loc>
   </url><url>
     <loc>https://seer-xjc.github.io/posts/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
