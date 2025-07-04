@@ -3,17 +3,20 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Linux 命令行系统是基于 Shell 的一种用户与操作系统内核交互的方式，是 Linux 系统操作的核心组成部分。通过键入命令，用户可以对系统进行几乎所有的操作，如文件管理、进程控制、系统配置、网络通信、软件安装等。linux具有非常完备的指令系统，各种指令、参数的灵活组合可以完成各种精妙的操作。
-Linux 指令系统虽然庞大而多样，但对于初学者而言，只需掌握一些常用的基础命令，便足以像使用 Windows 一样高效地操作 Linux 系统。下面文档中记录了linux系统中一些基础的常用命令。请自行下载学习。
-点击下载pdf文件">
+<meta name="description" content="Linux 命令行系统是基于 Shell 的一种用户与操作系统内核交互的方式，是 Linux 系统操作的核心组成部分。通过键入命令，用户可以对系统进行几乎所有的操作，如文件管理、进程控制、系统配置、网络通信、软件安装等。Linux具有非常完备的命令行系统，各种命令、参数的灵活组合可以完成各种精妙的操作。
+Linux 命令行系统虽然庞大而多样，但对于初学者而言，只需掌握一些常用的基础命令，便足以像使用 Windows 一样高效地操作 Linux 系统。下面文档中记录了Linux系统中一些最基础的常用命令（from： 王道训练营cpp-Linux讲义）。
+
+更加复杂的高阶命令可在实践过程中边用边学，切忌死记硬背。
+Linux系统详细教程链接：linux101">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://seer-xjc.github.io/docs/linux/%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
   <meta property="og:site_name" content="深度学习环境配置指南">
   <meta property="og:title" content="深度学习环境配置指南">
-  <meta property="og:description" content="Linux 命令行系统是基于 Shell 的一种用户与操作系统内核交互的方式，是 Linux 系统操作的核心组成部分。通过键入命令，用户可以对系统进行几乎所有的操作，如文件管理、进程控制、系统配置、网络通信、软件安装等。linux具有非常完备的指令系统，各种指令、参数的灵活组合可以完成各种精妙的操作。
-Linux 指令系统虽然庞大而多样，但对于初学者而言，只需掌握一些常用的基础命令，便足以像使用 Windows 一样高效地操作 Linux 系统。下面文档中记录了linux系统中一些基础的常用命令。请自行下载学习。
-点击下载pdf文件">
+  <meta property="og:description" content="Linux 命令行系统是基于 Shell 的一种用户与操作系统内核交互的方式，是 Linux 系统操作的核心组成部分。通过键入命令，用户可以对系统进行几乎所有的操作，如文件管理、进程控制、系统配置、网络通信、软件安装等。Linux具有非常完备的命令行系统，各种命令、参数的灵活组合可以完成各种精妙的操作。
+Linux 命令行系统虽然庞大而多样，但对于初学者而言，只需掌握一些常用的基础命令，便足以像使用 Windows 一样高效地操作 Linux 系统。下面文档中记录了Linux系统中一些最基础的常用命令（from： 王道训练营cpp-Linux讲义）。
+更加复杂的高阶命令可在实践过程中边用边学，切忌死记硬背。
+Linux系统详细教程链接：linux101">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
@@ -23,7 +26,7 @@ Linux 指令系统虽然庞大而多样，但对于初学者而言，只需掌�
 <link rel="canonical" href="https://seer-xjc.github.io/docs/linux/%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
 <link rel="stylesheet" href="/book.min.d5e59cb0aa8d22a5813c62cd5e25d3d172489a369c61dc3f622ee96ae1ebb457.css" integrity="sha256-1eWcsKqNIqWBPGLNXiXT0XJImjacYdw/Yi7pauHrtFc=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.a7771d4c534404e8a7a48b6d8d6c7c77768021530afc96c17ff4597568e5eeef.js" integrity="sha256-p3cdTFNEBOinpIttjWx8d3aAIVMK/JbBf/RZdWjl7u8=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.6d7383c37c6d97d8f8ee18414d56d9734b347fdc9bf23d4c23f0a767815038bb.js" integrity="sha256-bXODw3xtl9j47hhBTVbZc0s0f9yb8j1MI/CnZ4FQOLs=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -397,9 +400,11 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown book-article"><p>Linux 命令行系统是基于 Shell 的一种用户与操作系统内核交互的方式，是 Linux 系统操作的核心组成部分。通过键入命令，用户可以对系统进行几乎所有的操作，如文件管理、进程控制、系统配置、网络通信、软件安装等。linux具有非常完备的指令系统，各种指令、参数的灵活组合可以完成各种精妙的操作。</p>
-<p>Linux 指令系统虽然庞大而多样，但对于初学者而言，只需掌握一些常用的基础命令，便足以像使用 Windows 一样高效地操作 Linux 系统。下面文档中记录了linux系统中一些基础的常用命令。请自行下载学习。</p>
-<p><a href="/files/Linux_1.pdf">点击下载pdf文件</a></p>
+  <article class="markdown book-article"><p>Linux 命令行系统是基于 Shell 的一种用户与操作系统内核交互的方式，是 Linux 系统操作的核心组成部分。通过键入命令，用户可以对系统进行几乎所有的操作，如文件管理、进程控制、系统配置、网络通信、软件安装等。Linux具有非常完备的命令行系统，各种命令、参数的灵活组合可以完成各种精妙的操作。</p>
+<p>Linux 命令行系统虽然庞大而多样，但对于初学者而言，只需掌握一些常用的基础命令，便足以像使用 Windows 一样高效地操作 Linux 系统。下面文档中记录了Linux系统中一些最基础的常用命令（from： 王道训练营cpp-Linux讲义）。</p>
+<iframe src="/files/Linux_1.pdf" width="100%" height="600px"></iframe>
+<p>更加复杂的高阶命令可在实践过程中边用边学，切忌死记硬背。</p>
+<p>Linux系统详细教程链接：<a href="https://101.lug.ustc.edu.cn/">linux101</a></p>
 </article>
  
       
