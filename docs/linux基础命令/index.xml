@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux基础 on 深度学习环境配置指南</title>
+    <link>https://seer-xjc.github.io/docs/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</link>
+    <description>Recent content in Linux基础 on 深度学习环境配置指南</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://seer-xjc.github.io/docs/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
