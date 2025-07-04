@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://seer-xjc.github.io/docs/linux/%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</loc>
-  </url><url>
     <loc>https://seer-xjc.github.io/docs/linux/</loc>
   </url><url>
     <loc>https://seer-xjc.github.io/docs/example/table-of-contents/with-toc/</loc>
   </url><url>
+    <loc>https://seer-xjc.github.io/docs/linux/%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</loc>
+  </url><url>
     <loc>https://seer-xjc.github.io/docs/example/table-of-contents/without-toc/</loc>
+  </url><url>
+    <loc>https://seer-xjc.github.io/docs/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/</loc>
+  </url><url>
+    <loc>https://seer-xjc.github.io/docs/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</loc>
+  </url><url>
+    <loc>https://seer-xjc.github.io/docs/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E8%AF%B4%E6%98%8E/</loc>
   </url><url>
     <loc>https://seer-xjc.github.io/posts/creating-a-new-theme/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>

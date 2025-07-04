@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>深度学习环境配置指南</title>
+    <link>https://seer-xjc.github.io/docs/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/</link>
+    <description>Recent content on 深度学习环境配置指南</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://seer-xjc.github.io/docs/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://seer-xjc.github.io/docs/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://seer-xjc.github.io/docs/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</guid>
+      <description>&lt;h2 id=&#34;why&#34;&gt;&#xD;&#xA;  Why?&#xD;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#why&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;为避免多成员使用服务器时文件混乱，每位成员在使用服务器时需要单独管理自已的用户空间，原则上所有非共享的文件、代码等数据都在自己的用户空间内存储使用。&lt;/p&gt;&#xA;&lt;h2 id=&#34;how&#34;&gt;&#xD;&#xA;  how?&#xD;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#how&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;h4 id=&#34;第一次使用服务器时请按顺序进行以下操作添加用户如已有用户账号则跳过&#34;&gt;&#xD;&#xA;  第一次使用服务器时，请按顺序进行以下操作添加用户，如已有用户账号则跳过：&#xD;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%e7%ac%ac%e4%b8%80%e6%ac%a1%e4%bd%bf%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e6%97%b6%e8%af%b7%e6%8c%89%e9%a1%ba%e5%ba%8f%e8%bf%9b%e8%a1%8c%e4%bb%a5%e4%b8%8b%e6%93%8d%e4%bd%9c%e6%b7%bb%e5%8a%a0%e7%94%a8%e6%88%b7%e5%a6%82%e5%b7%b2%e6%9c%89%e7%94%a8%e6%88%b7%e8%b4%a6%e5%8f%b7%e5%88%99%e8%b7%b3%e8%bf%87&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h4&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;开机，按 clt+alt+T 键打开命令行终端&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;更新系统的软件包列表并安装所有可用的更新（注意：使用sudo命令需要验证拥有sudo权限的用户密码验证，请确认已知密码）：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -y&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;添加用户（为便于区分，用户名建议为名字手写字母，下面命令中用户名以 xxx 为例）&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo useradd -m -s /bin/bash xxx&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;给用户设置密码：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo passwd xxx&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;之后根据提示输入新密码、再确认密码，如有提示密码过短不用理会，可以正常设置。&lt;/p&gt;&#xA;&lt;p&gt;经过以上操作，新用户添加成功。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;将用户添加到sudo组（可选）&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo usermod -aG sudo xxx&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;以下命令每次使用服务器都可能用到&#34;&gt;&#xD;&#xA;  以下命令每次使用服务器都可能用到：&#xD;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%e4%bb%a5%e4%b8%8b%e5%91%bd%e4%bb%a4%e6%af%8f%e6%ac%a1%e4%bd%bf%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e9%83%bd%e5%8f%af%e8%83%bd%e7%94%a8%e5%88%b0&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h4&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;删除用户（将用户家目录和邮箱一起删除）&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo userdel -r test2&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;切换到用户xxx：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;su - xxx&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;不要省略中间的 - ，如果省略，切换用户后，终端还位于之前用户的文件系统中，但此时默认无权限访问其他用户文件，无法操作（读写）当前目录及文件，需要手动跳转到自己的用户的文件系统，而&lt;code&gt;su - xxx&lt;/code&gt;可在切换用户后自动跳转到新用户的家目录。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://seer-xjc.github.io/docs/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E8%AF%B4%E6%98%8E/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://seer-xjc.github.io/docs/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E8%AF%B4%E6%98%8E/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

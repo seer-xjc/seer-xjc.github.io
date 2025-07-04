@@ -4,48 +4,82 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="
-  Introduction
+  Why?
+  #
+
+为避免多成员使用服务器时文件混乱，每位成员在使用服务器时需要单独管理自已的用户空间，原则上所有非共享的文件、代码等数据都在自己的用户空间内存储使用。
+
+  how?
   #
 
 
-  Ferre hinnitibus erat accipitrem dixi Troiae tollens
+  第一次使用服务器时，请按顺序进行以下操作添加用户，如已有用户账号则跳过：
   #
 
-Lorem markdownum, a quoque nutu est quodcumque mandasset veluti. Passim
-inportuna totidemque nympha fert; repetens pendent, poenarum guttura sed vacet
-non, mortali undas. Omnis pharetramque gramen portentificisque membris servatum
-novabis fallit de nubibus atque silvas mihi. Dixit repetitaque Quid; verrit
-longa; sententia mandat quascumque nescio
-solebat litore; noctes. Hostem haerentem circuit
-plenaque tamen.
-
-Pedum ne indigenae finire invergens carpebat
-Velit posses summoque
-De fumos illa foret
 
 
-  Est simul fameque tauri qua ad
+开机，按 clt&#43;alt&#43;T 键打开命令行终端
+
+
+更新系统的软件包列表并安装所有可用的更新（注意：使用sudo命令需要验证拥有sudo权限的用户密码验证，请确认已知密码）：
+sudo apt update &amp;&amp; sudo apt upgrade -y
+
+
+添加用户（为便于区分，用户名建议为名字手写字母，下面命令中用户名以 xxx 为例）
+sudo useradd -m -s /bin/bash xxx
+
+
+给用户设置密码：
+sudo passwd xxx
+之后根据提示输入新密码、再确认密码，如有提示密码过短不用理会，可以正常设置。
+经过以上操作，新用户添加成功。
+
+
+将用户添加到sudo组（可选）
+sudo usermod -aG sudo xxx
+
+
+
+  以下命令每次使用服务器都可能用到：
   #
 
-Locum nullus nisi vomentes. Ab Persea sermone vela, miratur aratro; eandem
-Argolicas gener.">
+
+
+删除用户（将用户家目录和邮箱一起删除）
+sudo userdel -r test2
+
+
+切换到用户xxx：
+su - xxx
+不要省略中间的 - ，如果省略，切换用户后，终端还位于之前用户的文件系统中，但此时默认无权限访问其他用户文件，无法操作（读写）当前目录及文件，需要手动跳转到自己的用户的文件系统，而su - xxx可在切换用户后自动跳转到新用户的家目录。
+
+">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://seer-xjc.github.io/docs/example/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://seer-xjc.github.io/docs/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/">
   <meta property="og:site_name" content="深度学习环境配置指南">
-  <meta property="og:title" content="Example Site">
-  <meta property="og:description" content="Introduction#Ferre hinnitibus erat accipitrem dixi Troiae tollens#Lorem markdownum, a quoque nutu est quodcumque mandasset veluti. Passim inportuna totidemque nympha fert; repetens pendent, poenarum guttura sed vacet non, mortali undas. Omnis pharetramque gramen portentificisque membris servatum novabis fallit de nubibus atque silvas mihi. Dixit repetitaque Quid; verrit longa; sententia mandat quascumque nescio solebat litore; noctes. Hostem haerentem circuit plenaque tamen.
-Pedum ne indigenae finire invergens carpebat Velit posses summoque De fumos illa foret Est simul fameque tauri qua ad#Locum nullus nisi vomentes. Ab Persea sermone vela, miratur aratro; eandem Argolicas gener.">
+  <meta property="og:title" content="深度学习环境配置指南">
+  <meta property="og:description" content="Why?#为避免多成员使用服务器时文件混乱，每位成员在使用服务器时需要单独管理自已的用户空间，原则上所有非共享的文件、代码等数据都在自己的用户空间内存储使用。
+how?#第一次使用服务器时，请按顺序进行以下操作添加用户，如已有用户账号则跳过：#开机，按 clt&#43;alt&#43;T 键打开命令行终端
+更新系统的软件包列表并安装所有可用的更新（注意：使用sudo命令需要验证拥有sudo权限的用户密码验证，请确认已知密码）：
+sudo apt update &amp;&amp; sudo apt upgrade -y 添加用户（为便于区分，用户名建议为名字手写字母，下面命令中用户名以 xxx 为例）
+sudo useradd -m -s /bin/bash xxx 给用户设置密码：
+sudo passwd xxx 之后根据提示输入新密码、再确认密码，如有提示密码过短不用理会，可以正常设置。
+经过以上操作，新用户添加成功。
+将用户添加到sudo组（可选）
+sudo usermod -aG sudo xxx 以下命令每次使用服务器都可能用到：#删除用户（将用户家目录和邮箱一起删除）
+sudo userdel -r test2 切换到用户xxx：
+su - xxx 不要省略中间的 - ，如果省略，切换用户后，终端还位于之前用户的文件系统中，但此时默认无权限访问其他用户文件，无法操作（读写）当前目录及文件，需要手动跳转到自己的用户的文件系统，而su - xxx可在切换用户后自动跳转到新用户的家目录。">
   <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
-<title>Example Site | 深度学习环境配置指南</title>
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>用户管理 | 深度学习环境配置指南</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="https://seer-xjc.github.io/docs/example/">
+<link rel="canonical" href="https://seer-xjc.github.io/docs/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/">
 <link rel="stylesheet" href="/book.min.d5e59cb0aa8d22a5813c62cd5e25d3d172489a369c61dc3f622ee96ae1ebb457.css" integrity="sha256-1eWcsKqNIqWBPGLNXiXT0XJImjacYdw/Yi7pauHrtFc=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
   <script defer src="/en.search.min.d1b1d92c3fcbfb6f771367fa6c544b8d92e1e345849e3e8aa20f70f12c5d21d4.js" integrity="sha256-0bHZLD/L&#43;293E2f6bFRLjZLh40WEnj6Kog9w8SxdIdQ=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="https://seer-xjc.github.io/docs/example/index.xml" title="深度学习环境配置指南" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -131,7 +165,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-46707ce62e29866ed996d08ac8ce0eb7" class="toggle"  />
+    <input type="checkbox" id="section-46707ce62e29866ed996d08ac8ce0eb7" class="toggle" checked />
     <label for="section-46707ce62e29866ed996d08ac8ce0eb7" class="flex">
       <a href="/docs/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="flex-auto ">服务器配置</a>
     </label>
@@ -147,7 +181,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" class="">用户管理</a>
+    <a href="/docs/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" class="active">用户管理</a>
   
 
         </li>
@@ -167,7 +201,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/example/" class="active">Example Site</a>
+    <a href="/docs/example/" class="">Example Site</a>
   
 
           
@@ -430,7 +464,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>Example Site</h3>
+  <h3>用户管理</h3>
 
   <label for="toc-control">
     
@@ -446,10 +480,12 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#ferre-hinnitibus-erat-accipitrem-dixi-troiae-tollens">Ferre hinnitibus erat accipitrem dixi Troiae tollens</a></li>
-    <li><a href="#est-simul-fameque-tauri-qua-ad">Est simul fameque tauri qua ad</a></li>
-    <li><a href="#me-sol">Me sol</a></li>
-    <li><a href="#trepident-sitimque">Trepident sitimque</a></li>
+    <li><a href="#why">Why?</a></li>
+    <li><a href="#how">how?</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -462,78 +498,57 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown book-article"><h1 id="introduction">
-  Introduction
-  <a class="anchor" href="#introduction">#</a>
-</h1>
-<h2 id="ferre-hinnitibus-erat-accipitrem-dixi-troiae-tollens">
-  Ferre hinnitibus erat accipitrem dixi Troiae tollens
-  <a class="anchor" href="#ferre-hinnitibus-erat-accipitrem-dixi-troiae-tollens">#</a>
+  <article class="markdown book-article"><h2 id="why">
+  Why?
+  <a class="anchor" href="#why">#</a>
 </h2>
-<p>Lorem markdownum, a quoque nutu est <em>quodcumque mandasset</em> veluti. Passim
-inportuna totidemque nympha fert; repetens pendent, poenarum guttura sed vacet
-non, mortali undas. Omnis pharetramque gramen portentificisque membris servatum
-novabis fallit de nubibus atque silvas mihi. <strong>Dixit repetitaque Quid</strong>; verrit
-longa; sententia <a href="http://pastor-ad.io/questussilvas">mandat</a> quascumque nescio
-solebat <a href="http://lacrimas-ab.net/">litore</a>; noctes. <em>Hostem haerentem</em> circuit
-<a href="http://www.sine.io/in">plenaque tamen</a>.</p>
+<p>为避免多成员使用服务器时文件混乱，每位成员在使用服务器时需要单独管理自已的用户空间，原则上所有非共享的文件、代码等数据都在自己的用户空间内存储使用。</p>
+<h2 id="how">
+  how?
+  <a class="anchor" href="#how">#</a>
+</h2>
+<h4 id="第一次使用服务器时请按顺序进行以下操作添加用户如已有用户账号则跳过">
+  第一次使用服务器时，请按顺序进行以下操作添加用户，如已有用户账号则跳过：
+  <a class="anchor" href="#%e7%ac%ac%e4%b8%80%e6%ac%a1%e4%bd%bf%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e6%97%b6%e8%af%b7%e6%8c%89%e9%a1%ba%e5%ba%8f%e8%bf%9b%e8%a1%8c%e4%bb%a5%e4%b8%8b%e6%93%8d%e4%bd%9c%e6%b7%bb%e5%8a%a0%e7%94%a8%e6%88%b7%e5%a6%82%e5%b7%b2%e6%9c%89%e7%94%a8%e6%88%b7%e8%b4%a6%e5%8f%b7%e5%88%99%e8%b7%b3%e8%bf%87">#</a>
+</h4>
 <ul>
-<li>Pedum ne indigenae finire invergens carpebat</li>
-<li>Velit posses summoque</li>
-<li>De fumos illa foret</li>
+<li>
+<p>开机，按 clt+alt+T 键打开命令行终端</p>
+</li>
+<li>
+<p>更新系统的软件包列表并安装所有可用的更新（注意：使用sudo命令需要验证拥有sudo权限的用户密码验证，请确认已知密码）：</p>
+<pre tabindex="0"><code>sudo apt update &amp;&amp; sudo apt upgrade -y
+</code></pre></li>
+<li>
+<p>添加用户（为便于区分，用户名建议为名字手写字母，下面命令中用户名以 xxx 为例）</p>
+<pre tabindex="0"><code>sudo useradd -m -s /bin/bash xxx
+</code></pre></li>
+<li>
+<p>给用户设置密码：</p>
+<pre tabindex="0"><code>sudo passwd xxx
+</code></pre><p>之后根据提示输入新密码、再确认密码，如有提示密码过短不用理会，可以正常设置。</p>
+<p>经过以上操作，新用户添加成功。</p>
+</li>
+<li>
+<p>将用户添加到sudo组（可选）</p>
+<pre tabindex="0"><code>sudo usermod -aG sudo xxx
+</code></pre></li>
 </ul>
-<h2 id="est-simul-fameque-tauri-qua-ad">
-  Est simul fameque tauri qua ad
-  <a class="anchor" href="#est-simul-fameque-tauri-qua-ad">#</a>
-</h2>
-<p>Locum nullus nisi vomentes. Ab Persea sermone vela, miratur aratro; eandem
-Argolicas gener.</p>
-<h2 id="me-sol">
-  Me sol
-  <a class="anchor" href="#me-sol">#</a>
-</h2>
-<p>Nec dis certa fuit socer, Nonacria <strong>dies</strong> manet tacitaque sibi? Sucis est
-iactata Castrumque iudex, et iactato quoque terraeque es tandem et maternos
-vittis. Lumina litus bene poenamque animos callem ne tuas in leones illam dea
-cadunt genus, et pleno nunc in quod. Anumque crescentesque sanguinis
-<a href="http://www.late.net/alimentavirides">progenies</a> nuribus rustica tinguet. Pater
-omnes liquido creditis noctem.</p>
-<pre><code>if (mirrored(icmp_dvd_pim, 3, smbMirroredHard) != lion(clickImportQueue,
-        viralItunesBalancing, bankruptcy_file_pptp)) {
-    file += ip_cybercrime_suffix;
-}
-if (runtimeSmartRom == netMarketingWord) {
-    virusBalancingWin *= scriptPromptBespoke + raster(post_drive,
-            windowsSli);
-    cd = address_hertz_trojan;
-    soap_ccd.pcbServerGigahertz(asp_hardware_isa, offlinePeopleware, nui);
-} else {
-    megabyte.api = modem_flowchart - web + syntaxHalftoneAddress;
-}
-if (3 &lt; mebibyteNetworkAnimated) {
-    pharming_regular_error *= jsp_ribbon + algorithm * recycleMediaKindle(
-            dvrSyntax, cdma);
-    adf_sla *= hoverCropDrive;
-    templateNtfs = -1 - vertical;
-} else {
-    expressionCompressionVariable.bootMulti = white_eup_javascript(
-            table_suffix);
-    guidPpiPram.tracerouteLinux += rtfTerabyteQuicktime(1,
-            managementRosetta(webcamActivex), 740874);
-}
-var virusTweetSsl = nullGigo;
-</code></pre>
-<h2 id="trepident-sitimque">
-  Trepident sitimque
-  <a class="anchor" href="#trepident-sitimque">#</a>
-</h2>
-<p>Sentiet et ferali errorem fessam, coercet superbus, Ascaniumque in pennis
-mediis; dolor? Vidit imi <strong>Aeacon</strong> perfida propositos adde, tua Somni Fluctibus
-errante lustrat non.</p>
-<p>Tamen inde, vos videt e flammis Scythica parantem rupisque pectora umbras. Haec
-ficta canistris repercusso simul ego aris Dixit! Esse Fama trepidare hunc
-crescendo vigor ululasse vertice <em>exspatiantur</em> celer tepidique petita aversata
-oculis iussa est me ferro.</p>
+<h4 id="以下命令每次使用服务器都可能用到">
+  以下命令每次使用服务器都可能用到：
+  <a class="anchor" href="#%e4%bb%a5%e4%b8%8b%e5%91%bd%e4%bb%a4%e6%af%8f%e6%ac%a1%e4%bd%bf%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e9%83%bd%e5%8f%af%e8%83%bd%e7%94%a8%e5%88%b0">#</a>
+</h4>
+<ul>
+<li>
+<p>删除用户（将用户家目录和邮箱一起删除）</p>
+<pre tabindex="0"><code>sudo userdel -r test2
+</code></pre></li>
+<li>
+<p>切换到用户xxx：</p>
+<pre tabindex="0"><code>su - xxx
+</code></pre><p>不要省略中间的 - ，如果省略，切换用户后，终端还位于之前用户的文件系统中，但此时默认无权限访问其他用户文件，无法操作（读写）当前目录及文件，需要手动跳转到自己的用户的文件系统，而<code>su - xxx</code>可在切换用户后自动跳转到新用户的家目录。</p>
+</li>
+</ul>
 </article>
  
       
@@ -575,10 +590,12 @@ oculis iussa est me ferro.</p>
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#ferre-hinnitibus-erat-accipitrem-dixi-troiae-tollens">Ferre hinnitibus erat accipitrem dixi Troiae tollens</a></li>
-    <li><a href="#est-simul-fameque-tauri-qua-ad">Est simul fameque tauri qua ad</a></li>
-    <li><a href="#me-sol">Me sol</a></li>
-    <li><a href="#trepident-sitimque">Trepident sitimque</a></li>
+    <li><a href="#why">Why?</a></li>
+    <li><a href="#how">how?</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
